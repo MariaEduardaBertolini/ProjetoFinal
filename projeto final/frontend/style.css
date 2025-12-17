@@ -1,0 +1,150 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+/* FUNDO */
+body {
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* CONTAINER CENTRAL */
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* TÍTULOS */
+h2, h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+    outline: none;
+}
+
+/* BOTÕES PRINCIPAIS */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+#btnCadastrar { background-color: #007bff; }
+#btnCadastrar:hover { background-color: #0056b3; }
+
+#btnAtualizar { background-color: #28a745; }
+#btnAtualizar:hover { background-color: #1e7e34; }
+
+/* LISTA DE ALUNOS */
+ul {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li {
+    background: #f1f3f6;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* agora empilha info e botões */
+    gap: 10px; /* espaço entre info e botões */
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+li:hover {
+    background: #e2e6ea;
+}
+
+li .info p {
+    margin: 2px 0;
+}
+
+li .acoes {
+    display: flex;
+    gap: 10px; /* espaço entre os botões */
+}
+
+li .acoes button {
+    flex: 1; /* faz os botões ocuparem a mesma largura */
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+li .acoes button.atualizar {
+    background-color: #28a745;
+}
+li .acoes button.atualizar:hover {
+    background-color: #218838;
+}
+
+li .acoes button.deletar {
+    background-color: #dc3545;
+}
+li .acoes button.deletar:hover {
+    background-color: #c82333;
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    li {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
